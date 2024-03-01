@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute</title>
+    <style>
+      /*
+        CSS [attribute] Selector
+        memilih semua element a yang memiliki atribut target
+        a[target] {
+          color: red;
+        }
+      */
+
+      /*
+        CSS [attribute="value"] Selector
+        memilih semua element a yang memiliki atribut target dengan nilai "_blank"
+      */
+      a[target="_blank"] {
+        color: red;
+      }
+
+      /*
+        CSS [attribute~="value"] Selector
+        memilih semua element p yang memiliki atribut title yang terdapat kata belajar
+        p[title~="belajar"] {
+          color: red;
+        }
+      */
+
+      /*
+        CSS[attribute|="belajar"] Selector
+        memilih semua element p yang memiliki atribut title yang memiliki value="belajar" atau "belajar" yang diikut dengan karakter -
+        p[title|="belajar"] {
+          color: red;
+        }
+      */
+
+      /*
+        CSS [attribute^="value"] Selector
+        memilih semua element p yang memiliki atribut title yang memiliki value dimulai dengan "belajar"
+        p[title^="belajar"] {
+          color: red;
+        }
+      */
+
+      /*
+        CSS [attribute$="value"] Selector
+        memilih semua element p yang memiliki atribut title yang memiliki value diakhiri dengan "belajar"
+        p[title$="belajar"] {
+          color: red;
+        }
+      */
+
+      /*
+        CSS [attribute*="value"] Selector
+        memilih semua element p yang memiliki atribut title yang mengandung kata "belajar"
+        p[title*="belajar"] {
+          color: red;
+        }
+      */
+
+      /*
+        Attribute Selector Tanpa Tag
+      */
+      [title*="belajar"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" target="_blank">Contoh 1</a>
+    <a href="">Contoh 2</a>
+    <a href="" target="_self">Contoh 3</a>
+    <a href="">Contoh 4</a>
+
+    <p title="belajar pemrograman">Ini Dipilih</p>
+    <p title="belajarpemrograman">Ini Dipilih</p>
+    <p title="belajar-pemrograman">Ini Dipilih</p>
+    <p title="pemrograman belajar">Ini Dipilih</p>
+
+    <span title="pemrograman belajar">Ini contoh span</span>
+  </body>
+</html>

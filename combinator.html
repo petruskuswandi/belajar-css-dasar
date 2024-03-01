@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+        /* Descendent Selector */
+        /* 
+        Memilih semua 
+        tag p yang ada di 
+        class: division
+        */
+        .descendent p {
+            color: red;
+        }
+
+        /* Child Selector */
+        /*
+        Parent nya langsung 
+        atau tagnya langsung 
+        class: child
+        */
+        .child > p {
+            color: red;
+        } 
+
+        /* Adjacent Sibling Selector */
+        /* 
+        Memilih satu tag setelah class: adjacent_sibling
+        */
+        .adjacent_sibling + p{
+            color: red;
+        }
+
+        /* General Sibling Selector */
+        /*
+        Memilih semua tag setelah class: general_sibling
+        */
+        .general_sibling ~ p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="descendent">
+        <article>
+            <p>Ini Dipilih</p>
+        </article>
+        <p>Ini Dipilih</p>
+    </div>
+    <p>Ini Tidak Dipilih</p>
+
+    <div class="child">
+        <article>
+            <p>Ini Tidak Dipilih</p>
+        </article>
+        <p>Ini Dipilih</p>
+    </div>
+    <p>Ini Tidak Dipilih</p>
+
+    <div class="adjacent_sibling">
+        <article>
+            <p>Ini Tidak Dipilih</p>
+        </article>
+        <p>Ini Tidak Dipilih</p>
+    </div>
+    <p>Ini Dipilih</p>
+    <p>Ini Tidak Dipilih</p>
+
+    <div class="general_sibling">
+        <article>
+            <p>Ini Tidak Dipilih</p>
+        </article>
+        <p>Ini Tidak Dipilih</p>
+    </div>
+    <p>Ini Dipilih</p>
+    <p>Ini Dipilih</p>
+</body>
+</html>
